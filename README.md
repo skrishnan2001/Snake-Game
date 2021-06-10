@@ -1,3 +1,8 @@
+# Project Link
+https://skrishnan2001.github.io/Snake-Game/
+
+This project is a Snake game that uses a linked list to represent the snakes's body and also reverses the snake (that is, it reverses the linked list) whenever it eats the purple coloured food. As like the classic snake game, the snake grows in length whenever you eat the food(two types-red and purple), and the scoring is based on the amount of food the snake eats(of course, you cannot go out of bounds or collide with the snake's own body, doing which will reset the snake's length and your scores.)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
