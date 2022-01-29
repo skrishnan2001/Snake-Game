@@ -72,9 +72,6 @@ const Board = () => {
         });
     }, []);
 
-    // `useInterval` is needed; you can't naively do `setInterval` in the
-    // `useEffect` above. See the article linked above the `useInterval`
-    // definition for details.
     useInterval(() => {
         moveSnake();
     }, 150);
@@ -85,10 +82,7 @@ const Board = () => {
         if (!isValidDirection) return;
         const snakeWillRunIntoItself =
             getOppositeDirection(newDirection) === direction && snakeCells.size > 1;
-        // Note: this functionality is currently broken, for the same reason that
-        // `useInterval` is needed. Specifically, the `direction` and `snakeCells`
-        // will currently never reflect their "latest version" when `handleKeydown`
-        // is called. I leave it as an exercise to the viewer to fix this :P
+        
         if (snakeWillRunIntoItself) return;
         setDirection(newDirection);
     };
